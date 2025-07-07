@@ -76,7 +76,7 @@ async def show_balance(msg: types.Message):
 async def withdraw_request(msg: types.Message):
     user_id = msg.from_user.id
     balance = get_balance(user_id)
-    await bot.send_message(ADMIN_ID, f"🔔 Запрос на вывод от @{msg.from_user.username or user_id} (ID: {user_id})
+    await bot.send_message(ADMIN_ID, f"🔔 Запрос на вывод от @{msg.from_user.username or user_id} (ID: {user_id})")
 Баланс: ⭐ {balance}")
     await msg.answer("Запрос отправлен админу. Ожидай ответа.")
 
